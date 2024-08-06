@@ -1,25 +1,53 @@
-import logo from './logo.svg';
-import './App.css';
-
+import dog1 from "./assets/images/dog1.jpg";
+import dog2 from "./assets/images/dog2.jpg";
+import dog3 from "./assets/images/dog3.jpg";
+import dog4 from "./assets/images/dog4.jpg";
+import dog5 from "./assets/images/dog5.jpg";
+import DogsDiv from "./components/DogsDiv";
+var dogsList = [
+    {
+      image: dog1,
+      name : "Kaira"
+    },
+    {
+      image:dog2,
+      name : "Snoopy"
+    },
+    {
+      image:dog3,
+      name : "Bairav"
+    },
+    {
+      image:dog4,
+      name : "Caesar"
+    },
+    {
+      image:dog5,
+      name : "Richard"
+    },
+    {
+      image:dog3,
+      name : "Jiju"
+    },
+    {
+      image:dog2,
+      name : "Benny"
+    },
+    {
+      image:dog1,
+      name : "Mochi"
+    }
+  ]
+  
+  
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <div>
+      {
+        dogsList.map(function(item){
+          return <DogsDiv image={item.image} name={item.name}></DogsDiv>
+        })
+      }
+  </div>
 }
 
-export default App;
+export default App
